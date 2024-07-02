@@ -112,7 +112,7 @@
 		</Accordion.Content>
 	</Accordion.Item>
 	<Accordion.Item value="item-7">
-		<Accordion.Trigger>New Project Setup</Accordion.Trigger>
+		<Accordion.Trigger>New Project Settings</Accordion.Trigger>
 		<Accordion.Content>
 			<p>
 				Each time the <code
