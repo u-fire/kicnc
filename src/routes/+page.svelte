@@ -131,4 +131,9 @@
 	rel="noopener noreferrer">https://github.com/u-fire/kicnc</a
 >
 <p class="font-medium">Version: <span class="text-sm text-muted-foreground">0.9.0</span></p>
-
+<a
+	class="font-medium text-primary underline underline-offset-4"
+	href="https://microfire.co"
+	target="_blank"
+	rel="noopener noreferrer">Microfire LLC</a
+>

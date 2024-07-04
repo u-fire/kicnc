@@ -7,6 +7,8 @@
 	import { Command } from '@tauri-apps/api/shell';
 	import { CircuitBoard } from 'lucide-svelte';
 	import { ModeWatcher } from 'mode-watcher';
+	import { platform  } from '@tauri-apps/api/os';
+
 	import '../app.css';
 
 	const sidebarNavItems = [
@@ -208,21 +210,24 @@
 
 		_stdout = '';
 		_stderr = '';
-		const command = new Command('pcb2gcode', _command_arguments, { cwd: $project_dir });
+		const platform_name = await platform();
+		const pcb2gcode_arch = `pcb2gcode-${platform_name}`
+
+		const command = new Command(pcb2gcode_arch, _command_arguments, { cwd: $project_dir });
 		command.on('error', (error) => console.error(`command error: "${error}"`));
 		command.stdout.on('data', (line) => (_stdout += line + '<br>'));
 		command.stderr.on('data', (line) => (_stderr += line + '<br>'));
 		await command.execute();
 
 		_stdout += '<strong>Making stencil</strong>' + '<br>';
-		const stencil_command = new Command('pcb2gcode', _stencil_arguments, { cwd: $project_dir });
+		const stencil_command = new Command(pcb2gcode_arch, _stencil_arguments, { cwd: $project_dir });
 		stencil_command.on('error', (error) => console.error(`command error: "${error}"`));
 		stencil_command.stdout.on('data', (line) => (_stdout += line + '<br>'));
 		stencil_command.stderr.on('data', (line) => (_stderr += line + '<br>'));
 		await stencil_command.execute();
 
 		_stdout += '<strong>Making mask</strong>' + '<br>';
-		const mask_command = new Command('pcb2gcode', _mask_arguments, { cwd: $project_dir });
+		const mask_command = new Command(pcb2gcode_arch, _mask_arguments, { cwd: $project_dir });
 		mask_command.on('error', (error) => console.error(`command error: "${error}"`));
 		mask_command.stdout.on('data', (line) => (_stdout += line + '<br>'));
 		mask_command.stderr.on('data', (line) => (_stderr += line + '<br>'));
