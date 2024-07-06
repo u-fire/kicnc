@@ -47,45 +47,49 @@
 	<Accordion.Item value="item-4">
 		<Accordion.Trigger>Laser/Drillbit Workflow</Accordion.Trigger>
 		<Accordion.Content>
-			<p>0️⃣ Use paint/soldermasked blank PCBs.</p>
-			<p>1️⃣ Mill copper layer by ablating the paint away.</p>
-			<p>2️⃣ Etch away the exposed copper, leaving isolated traces, pads and annular rings.</p>
-			<p>3️⃣ Ablate the mask layer, exposing the pads and annular rings.</p>
-			<p>4️⃣ Drill holes.</p>
-			<p>5️⃣ Cutout outline.</p>
 			<p>
-				6️⃣ Verify g-code using <a class="font-semibold underline" href="https://camotics.org/"
-					>Camotics</a
+				0️⃣ Generate and verify g-code using <a
+					class="font-semibold underline"
+					href="https://camotics.org/">Camotics</a
 				> or similar.
 			</p>
+			<p>1️⃣ Use paint/soldermasked blank PCBs.</p>
 			<p>
-				7️⃣ Send the g-code to the CNC. <a
+				2️⃣ Send the g-code to the CNC. <a
 					class="font-semibold underline"
 					href="https://sienci.com/gsender/">gSender</a
 				>, <a class="font-semibold underline" href="https://winder.github.io/ugs_website/">UGS</a>,
 				<a class="font-semibold underline" href="https://github.com/Denvi/Candle">Candle</a>.
 			</p>
+			<p>3️⃣ Mill copper layer by ablating the paint away.</p>
+			<p>
+				4️⃣ Chemical etch away the exposed copper, leaving isolated traces, pads and annular rings.
+			</p>
+			<p>5️⃣ Ablate the mask layer, exposing the pads and annular rings.</p>
+			<p>6️⃣ Drill holes.</p>
+			<p>7️⃣ Cutout outline.</p>
 		</Accordion.Content>
 	</Accordion.Item>
 	<Accordion.Item value="item-5">
 		<Accordion.Trigger>Drillbit Workflow</Accordion.Trigger>
 		<Accordion.Content>
-			<p>0️⃣ Create a heightmap of the mounted PCB blank.</p>
-			<p>1️⃣ Mill copper layer.</p>
-			<p>2️⃣ Drill holes.</p>
-			<p>3️⃣ Cutout outline.</p>
 			<p>
-				4️⃣ Verify g-code using <a class="font-semibold underline" href="https://camotics.org/"
-					>Camotics</a
+				0️⃣ Generate and verify g-code using <a
+					class="font-semibold underline"
+					href="https://camotics.org/">Camotics</a
 				> or similar.
 			</p>
+			<p>1️⃣ Create a heightmap of the mounted PCB blank.</p>
 			<p>
-				5️⃣ Send the g-code to the CNC. <a
+				2️⃣ Send the g-code to the CNC. <a
 					class="font-semibold underline"
 					href="https://sienci.com/gsender/">gSender</a
 				>, <a class="font-semibold underline" href="https://winder.github.io/ugs_website/">UGS</a>,
 				<a class="font-semibold underline" href="https://github.com/Denvi/Candle">Candle</a>.
 			</p>
+			<p>3️⃣ Mill copper layer.</p>
+			<p>4️⃣ Drill holes.</p>
+			<p>5️⃣ Cutout outline.</p>
 			<p>6️⃣ Apply soldermask.</p>
 		</Accordion.Content>
 	</Accordion.Item>
@@ -102,9 +106,12 @@
 				<code
 					class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
 					>$31</code
-				>. 
+				>.
 			</p>
-			<p>If min is 0 and max is 255, then 128 would be half-power. If max was 10,000, then 5,000 would have half-power. </p>
+			<p>
+				If min is 0 and max is 255, then 128 would be half-power. If max was 10,000, then 5,000
+				would have half-power.
+			</p>
 			<p>
 				Laser mode can be set with some hardware/software. It makes some operations quicker and
 				skips others.
@@ -118,7 +125,9 @@
 				Each time the <code
 					class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
 					>Make</code
-				> button is pressed, a filed named `millproject-kicnc` is created alongside the gerbers. This is the savefile KiCNC uses. It can be copied into a new directory without modification, just select the new gerber files in KiCNC and it will use all the copied settings. 
+				> button is pressed, a filed named `millproject-kicnc` is created alongside the gerbers. This
+				is the savefile KiCNC uses. It can be copied into a new directory without modification, just
+				select the new gerber files in KiCNC and it will use all the copied settings.
 			</p>
 		</Accordion.Content>
 	</Accordion.Item>
@@ -130,7 +139,7 @@
 	target="_blank"
 	rel="noopener noreferrer">https://github.com/u-fire/kicnc</a
 >
-<p class="font-medium">Version: <span class="text-sm text-muted-foreground">0.9.0</span></p>
+<p class="font-medium">Version: <span class="text-sm text-muted-foreground">0.9.1</span></p>
 <a
 	class="font-medium text-primary underline underline-offset-4"
 	href="https://microfire.co"
