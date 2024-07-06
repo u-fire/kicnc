@@ -8,7 +8,8 @@
 	import { CircuitBoard } from 'lucide-svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import { platform  } from '@tauri-apps/api/os';
-
+	import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
+	
 	import '../app.css';
 
 	const sidebarNavItems = [
@@ -274,6 +275,7 @@
 				<Sheet.Root>
 					<Sheet.Trigger disabled={$make_disabled}><Button class="w-full" on:click={make_files} disabled={$make_disabled}>Make</Button></Sheet.Trigger>
 					<Sheet.Content side="bottom">
+						<ScrollArea class="h-[400px] overflow-scroll overscroll-auto">
 						<Sheet.Header>
 							<Sheet.Title>Output</Sheet.Title>
 							<Sheet.Description>
@@ -283,6 +285,7 @@
 								</div>
 							</Sheet.Description>
 						</Sheet.Header>
+					</ScrollArea>
 					</Sheet.Content>
 				</Sheet.Root>
 			</nav>
