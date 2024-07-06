@@ -68,6 +68,21 @@
 
 	<Card.Root>
 		<Card.Header>
+			<Card.Title>Isolation Width</Card.Title>
+			<Card.Description>Minimum isolation width between copper surfaces</Card.Description>
+		</Card.Header>
+		<Card.Content>
+			<form>
+				<Input bind:value={ $millproject.milling['isolation-width'] } type="number" min="1" step="1000" />
+			</form>
+		</Card.Content>
+		<!-- <Card.Footer class="border-t px-6 py-4">
+            <Button>Save</Button>
+        </Card.Footer> -->
+	</Card.Root>
+
+	<Card.Root>
+		<Card.Header>
 			<Card.Title>Outputs</Card.Title>
 			<Card.Description>Name for the G-code file</Card.Description>
 		</Card.Header>

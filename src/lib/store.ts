@@ -31,6 +31,7 @@ export const millproject = writable({
         'front-output': '',
         'back-output': '',
         'invert-gerbers': false,
+        'isolation-width': 1
     },
     outline: {
         'cutter-diameter': 1.0,
