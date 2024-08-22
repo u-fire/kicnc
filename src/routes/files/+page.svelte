@@ -44,9 +44,9 @@
 		var lines = contents.split('\n');
 		for (var i = 0; i < lines.length; i++) {
 			var line = lines[i].split('=');
-			if ($millproject.files.hasOwnProperty(line[0])) {
-				$millproject.files[line[0] as keyof typeof $millproject.files] = line[1];
-			}
+			// if ($millproject.files.hasOwnProperty(line[0])) {
+			// 	$millproject.files[line[0] as keyof typeof $millproject.files] = line[1];
+			// }
 			if ($millproject.common.hasOwnProperty(line[0])) {
 				$millproject.common[line[0] as keyof typeof $millproject.common] = line[1] as never;
 			}
