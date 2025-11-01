@@ -140,4 +140,21 @@
         </Card.Footer> -->
 	</Card.Root>
 
+	<Card.Root>
+		<Card.Header>
+			<Card.Title>No G81</Card.Title>
+			<Card.Description>Some machines may not support G81 commands</Card.Description>
+		</Card.Header>
+		<Card.Content>
+			<form>
+				<div class="flex items-center space-x-2">
+					<Switch bind:checked={$millproject.drill.nog81} id="nog81" />
+					<Label for="nog81">Replace G81 with G0+G1 commands</Label>
+				</div>
+			</form>
+		</Card.Content>
+		<!-- <Card.Footer class="border-t px-6 py-4">
+            <Button>Save</Button>
+        </Card.Footer> -->
+	</Card.Root>
 </div>

@@ -97,6 +97,12 @@
 			$millproject.drill['milldrill'] = false;
 		}
 
+		if (($millproject.drill['nog81'] as unknown) == 'true') {
+			$millproject.drill['nog81'] = true;
+		} else {
+			$millproject.drill['nog81'] = false;
+		}
+
 		if (($millproject.stencil['stencil-invert-gerbers'] as unknown) == 'true') {
 			$millproject.stencil['stencil-invert-gerbers'] = true;
 		} else {
