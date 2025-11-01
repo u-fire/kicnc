@@ -56,6 +56,7 @@ export const millproject = writable({
         'milldrill': false,
         'milldrill-diameter': null,
         'milldrill-output': '',
+        'nog81': false
     },
     stencil: {
         'stencil-mill-feed': 1000,
